@@ -1,0 +1,23 @@
+.table {
+  @apply grid grid-cols-3 grid-flow-row-dense w-1/2 m-auto;
+
+  .header {
+    @apply flex w-full;
+  }
+
+  .algorithm {
+    @apply col-span-3 row-auto;
+
+    & > div {
+      @apply h-full flex items-center justify-center border-black border-[1px] border-solid;
+    }
+
+    .name {
+      @apply min-w-[50px] border-l-2;
+    }
+
+    .alg {
+      @apply flex-grow border-r-2;
+    }
+  }
+}
