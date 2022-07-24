@@ -1,14 +1,29 @@
 .table {
-  @apply grid grid-cols-3 grid-flow-row-dense w-1/2 m-auto;
+  @apply relative mt-24 grid grid-cols-3 grid-flow-row-dense w-1/2 m-auto;
 
   @media screen and (max-width: 1100px) {
-    & {
+    &,
+    .header {
       @apply w-3/4;
     }
   }
 
   .header {
-    @apply flex w-full;
+    @apply absolute top-[1px] -translate-y-full flex w-[100%];
+
+    & > * {
+      @apply border-black dark:border-neutral-200 border-t-2 border-[1px] font-semibold flex justify-center;
+    }
+
+    & > :nth-child(1) {
+      @apply min-w-[12ch] border-l-2;
+    }
+    & > :nth-child(2) {
+      @apply min-w-[130px];
+    }
+    & > :nth-child(3) {
+      @apply flex-grow border-r-2;
+    }
   }
 
   .algorithm {

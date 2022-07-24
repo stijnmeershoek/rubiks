@@ -20,6 +20,11 @@ interface Props {
 export function Table({ arr, size, mask, specialAlg, both = false }: Props) {
     return (
         <div className='table'>
+            <div className="header">
+                <div><h2>Name</h2></div>
+                <div><h2>Case</h2></div>
+                <div><h2>Algorithm</h2></div>
+            </div>
             {arr.map((alg) => {
                 return <div key={alg.alg.toString() + alg.name} className='algorithm flex items-center '>
                     <div className='name'><h2>{alg.name}</h2></div>
