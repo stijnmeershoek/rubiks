@@ -3,12 +3,13 @@
 @tailwind components;
 
 body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  @apply w-screen h-screen overflow-hidden;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 .app {
-  overflow-y: auto;
-  overflow-x: hidden;
+  @apply overflow-y-auto overflow-x-hidden;
 }

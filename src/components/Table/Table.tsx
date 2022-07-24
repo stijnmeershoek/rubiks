@@ -20,6 +20,7 @@ interface Props {
 export function Table({ arr, size, mask, specialAlg, both = false }: Props) {
     return (
         <div className='table'>
+            {specialAlg && <div className='absolute left-0 -top-10 -translate-y-full w-full text-center'>[*] = {specialAlg.replace("Rw2 R2", "2R2")}</div>}
             <div className="header">
                 <div><h2>Name</h2></div>
                 <div><h2>Case</h2></div>
