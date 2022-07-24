@@ -3,7 +3,7 @@ import { Face, Masking } from "sr-visualizer";
 export const arr = [
   {
     name: "Diagonal",
-    actualAlg: "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+    alg: "F R U' R' U' R U R' F' R U R' U' R' F R F'",
     mask: Masking.COLL,
     arrows: [
       {
@@ -21,7 +21,7 @@ export const arr = [
   {
     name: "Headlights",
     mask: Masking.COLL,
-    actualAlg: "R U R' U' R' F R2 U' R' U' R U R' F'",
+    alg: "R U R' U' R' F R2 U' R' U' R U R' F'",
     arrows: [
       {
         s1: { face: Face.U, n: 8 },
@@ -37,7 +37,7 @@ export const arr = [
   },
   {
     name: "PLL (H)",
-    actualAlg: "M2 U M2 U2 M2 U M2",
+    alg: "M2 U M2 U2 M2 U M2",
     arrows: [
       {
         s1: { face: Face.U, n: 7 },
@@ -63,8 +63,7 @@ export const arr = [
   },
   {
     name: "PLL (Ua)",
-    alg: "(M2 U M U2 M' U M2) (M2 U M U2 M' U M2)",
-    actualAlg: "M2 U M U2 M' U M2",
+    alg: "M2 U M U2 M' U M2",
     arrows: [
       {
         s1: { face: Face.U, n: 5 },
@@ -85,8 +84,7 @@ export const arr = [
   },
   {
     name: "PLL (Ub)",
-    alg: "(M2 U' M U2 M' U' M2) (M2 U' M U2 M' U' M2)",
-    actualAlg: "M2 U' M U2 M' U' M2",
+    alg: "M2 U' M U2 M' U' M2",
     arrows: [
       {
         s1: { face: Face.U, n: 3 },
@@ -107,8 +105,7 @@ export const arr = [
   },
   {
     name: "PLL (Z)",
-    alg: "y M' U M2 U M2 U M' U2 M2 y",
-    actualAlg: "M' U M2 U M2 U M' U2 M2",
+    alg: "M' U M2 U M2 U M' U2 M2",
     arrows: [
       {
         s1: { face: Face.U, n: 1 },

@@ -1,6 +1,12 @@
 .table {
   @apply grid grid-cols-3 grid-flow-row-dense w-1/2 m-auto;
 
+  @media screen and (max-width: 1100px) {
+    & {
+      @apply w-3/4;
+    }
+  }
+
   .header {
     @apply flex w-full;
   }
@@ -9,15 +15,24 @@
     @apply col-span-3 row-auto;
 
     & > div {
-      @apply h-full flex items-center justify-center border-black border-[1px] border-solid;
+      @apply h-full flex items-center justify-center dark:border-neutral-200 border-black border-[1px] border-solid;
     }
 
     .name {
-      @apply min-w-[50px] border-l-2;
+      @apply min-w-[12ch] border-l-2;
+    }
+
+    @media screen and (max-width: 680px) {
+      .name {
+        @apply hidden;
+      }
+      .img {
+        @apply border-l-2;
+      }
     }
 
     .alg {
-      @apply flex-grow border-r-2;
+      @apply flex-grow border-r-2 p-4;
     }
   }
 }

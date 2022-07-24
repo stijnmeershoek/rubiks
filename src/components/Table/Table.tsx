@@ -1,5 +1,4 @@
 import './Table.css'
-import { arr as pllalgs } from '../../algs/3x3/PLL'
 import { Cube } from '../CubeIMG'
 import { Arrow, Masking } from 'sr-visualizer'
 
@@ -13,17 +12,24 @@ type Algorithm = {
 interface Props {
     arr: Algorithm[],
     size: number,
-    mask?: Masking
+    mask?: Masking,
+    specialAlg?: string,
+    both?: boolean
 }
 
-export function Table({ arr, size, mask }: Props) {
+export function Table({ arr, size, mask, specialAlg, both = false }: Props) {
     return (
         <div className='table'>
             {arr.map((alg) => {
-                return <div className='algorithm flex items-center '>
+                return <div key={alg.alg.toString() + alg.name} className='algorithm flex items-center '>
                     <div className='name'><h2>{alg.name}</h2></div>
                     <div className='img'>
-                        <Cube key={alg.name} cubeSize={size} case={alg.alg} view={"plan"} mask={alg.mask ? alg.mask : mask} arrows={alg.arrows as Arrow[]}></Cube>
+                        <Cube cubeSize={size} case={specialAlg ? alg.alg.replace("[*]", specialAlg) : alg.alg} view={"plan"} mask={alg.mask ? alg.mask : mask} arrows={alg.arrows as Arrow[]}></Cube>
+                        {both
+                            ? <div className="-scale-x-100">
+                                <Cube cubeSize={size} case={specialAlg ? "x2 y2" + alg.alg.replace("[*]", specialAlg) : "x2 y2" + alg.alg} view={"plan"} mask={alg.mask ? alg.mask : mask} arrows={alg.arrows as Arrow[]}></Cube>
+                            </div>
+                            : <></>}
                     </div>
                     <div className='alg'>
                         {alg.alg}

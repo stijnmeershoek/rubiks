@@ -3,7 +3,7 @@ export const arr = [
   { name: "L2", alg: "R' U2 R' D' R U2 R' D R2" },
   { name: "L3", alg: "R U2 R D R' U2 R D' R2" },
   { name: "L4", alg: "F R' F' r U R U' r'" },
-  { name: "L5", alg: "x R' U R D' R' U' R D" },
+  { name: "L5", alg: "x R' U R D' R' U' R D x'" },
   { name: "L6", alg: "R' U' (R U R') F' R U R' U' R' F R2" },
   { name: "U1", alg: "R' U' R U' R' U2 R R U R' U R U2 R'" },
   { name: "U2", alg: "R' F R U' R' U' R U R' F' R U R' U' R' F R F' R" },
