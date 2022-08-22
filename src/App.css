@@ -10,6 +10,10 @@ body {
   color-scheme: dark;
 }
 
+#root {
+  @apply w-full h-full;
+}
+
 .app {
-  @apply overflow-y-auto overflow-x-hidden;
+  @apply relative w-full h-full overflow-y-auto overflow-x-hidden;
 }

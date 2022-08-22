@@ -7,7 +7,7 @@ export function Cube(options: SRVisualizer.ICubeOptions) {
     useEffect(() => {
         let element = ref.current as unknown as HTMLDivElement;
         SRVisualizer.cubeSVG(element, options);
-    }, [])
+    }, [options.algorithm])
 
     return (
         <div ref={ref}>
