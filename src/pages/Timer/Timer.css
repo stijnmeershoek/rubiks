@@ -6,10 +6,10 @@
   }
 
   & > .view-all-times {
-    @apply absolute inset-0 bg-[rgb(0,0,0,0.25)] flex justify-center items-center gap-5;
+    @apply absolute inset-0 bg-[rgb(0,0,0,0.5)] flex justify-center items-center gap-5;
 
     & > .modal {
-      @apply bg-white text-left flex flex-col px-10 py-5;
+      @apply bg-white dark:bg-[#121212] text-left flex flex-col px-10 py-5;
 
       & > h4 {
         @apply border-t-[1px] border-neutral-300 min-w-full my-2 pr-10;

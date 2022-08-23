@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "/rubiks/",
   build: {
-    target: "es2019",
+    target: "es2020",
     outDir: "build",
   },
   plugins: [react()],
