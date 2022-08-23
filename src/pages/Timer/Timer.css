@@ -1,25 +1,38 @@
 .timer-screen {
-  @apply h-screen w-full overflow-auto flex flex-col gap-[7vh] items-center text-center py-14;
+  @apply h-full w-full overflow-auto flex flex-col justify-between items-center text-center py-14 px-6;
 
-  * {
-    @apply m-auto;
+  & .select-cube {
+    @apply shadow shadow-[rgb(0,0,0,.4)] dark:shadow-[rgb(0,0,0,.75)] bg-neutral-50 border border-neutral-600 text-neutral-900 text-base font-semibold rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block p-2.5 cursor-pointer dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-white dark:text-white dark:focus:ring-neutral-700 dark:focus:border-neutral-700;
+  }
+
+  .timer-btn {
+    @apply h-fit px-6 shadow shadow-[rgb(0,0,0,.4)] dark:shadow-[rgb(0,0,0,.75)] bg-neutral-50 border border-neutral-600 text-base font-semibold rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block p-2.5 cursor-pointer dark:bg-neutral-900 dark:border-neutral-800 dark:hover:bg-neutral-800 dark:hover:border-neutral-700 dark:focus:ring-neutral-700 dark:focus:border-neutral-700;
   }
 
   & > .view-all-times {
-    @apply absolute inset-0 bg-[rgb(0,0,0,0.5)] flex justify-center items-center gap-5;
+    @apply absolute inset-0 bg-[rgb(0,0,0,0.5)] flex justify-center items-center gap-5 cursor-pointer;
 
     & > .modal {
-      @apply bg-white dark:bg-[#121212] text-left flex flex-col px-10 py-5;
+      @apply bg-white dark:bg-[#1b1b1b] text-left flex flex-col px-10 py-5 rounded-lg shadow-2xl cursor-default;
+
+      & > .timer-btn {
+        @apply max-w-fit self-center mt-5;
+      }
 
       & > h4 {
-        @apply border-t-[1px] border-neutral-300 min-w-full my-2 pr-10;
+        @apply border-t-[1px] border-neutral-600 min-w-full my-2 pr-10 flex;
+
+        & > span {
+          @apply ml-4;
+        }
       }
     }
   }
 }
 
 .info {
-  @apply grid grid-cols-2 grid-rows-3 gap-10;
+  @apply grid grid-cols-2 grid-rows-3 gap-10 mt-14;
+
   & h1 {
     @apply text-xl;
   }
