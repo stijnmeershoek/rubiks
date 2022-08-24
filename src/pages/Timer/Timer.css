@@ -6,7 +6,7 @@
   }
 
   .timer-btn {
-    @apply h-fit px-6 shadow shadow-[rgb(0,0,0,.4)] dark:shadow-[rgb(0,0,0,.75)] bg-neutral-50 border border-neutral-600 text-base font-semibold rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block p-2.5 cursor-pointer dark:bg-neutral-900 dark:border-neutral-800 dark:hover:bg-neutral-800 dark:hover:border-neutral-700 dark:focus:ring-neutral-700 dark:focus:border-neutral-700;
+    @apply h-fit px-6 shadow shadow-[rgb(0,0,0,.4)] dark:shadow-[rgb(0,0,0,.75)] bg-neutral-50 border border-neutral-600 text-base font-semibold rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block p-2.5 cursor-pointer dark:bg-neutral-900 dark:border-neutral-800 dark:hover:bg-neutral-800 dark:hover:border-neutral-700 dark:focus:ring-neutral-700 dark:focus:border-neutral-700 justify-self-end;
   }
 
   & > .view-all-times {
@@ -19,8 +19,12 @@
         @apply max-w-fit self-center mt-5;
       }
 
-      & > h4 {
-        @apply border-t-[1px] border-neutral-600 min-w-full my-2 pr-10 flex;
+      & > div:not(.header) {
+        @apply flex border-t-[1px] border-neutral-600 min-w-full my-2;
+      }
+
+      & h4 {
+        @apply flex mr-4;
 
         & > span {
           @apply ml-4;
@@ -31,7 +35,7 @@
 }
 
 .info {
-  @apply grid grid-cols-2 grid-rows-3 gap-10 mt-14;
+  @apply grid grid-cols-2 grid-rows-2 gap-10 mt-8;
 
   & h1 {
     @apply text-xl;

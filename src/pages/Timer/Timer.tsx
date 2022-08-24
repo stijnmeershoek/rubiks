@@ -1,5 +1,5 @@
-import { Dispatch, useEffect, useState } from "react";
-import useLocalStorage from "../../hooks/useLocalStorage";
+import { useEffect, useState } from "react";
+import useLocalStorage from '../../hooks/useLocalStorage';
 import { randomScrambleForEvent } from "cubing/scramble";
 import { setDebug } from "cubing/search";
 import "./Timer.css"
@@ -41,7 +41,7 @@ export function Timer() {
     const [time, setTime] = useState(0);
     const [isActive, setIsActive] = useState(false);
 
-    const [times, setTimes] = useLocalStorage<Times>('CubeAlg__Times', initialTimes);
+    const [times, setTimes] = useLocalStorage<Times>("CubeAlgs_Times", initialTimes)
     const [ao5, setAo5] = useState<number | undefined>();
     const [ao12, setAo12] = useState<number | undefined>();
 
@@ -152,19 +152,26 @@ export function Timer() {
                 <div><h1>ao5:</h1><h4>{ao5 ? ao5.toFixed(2) : "-"}</h4></div>
                 <div><h1>ao12:</h1> <h4>{ao12 ? ao12.toFixed(2) : "-"}</h4></div>
             </div>}
-            {!focus && <button onClick={() => { setModalOpen(true) }} className="timer-btn text-neutral-500 font-normal hover:text-neutral-400">View All Times</button>}
+            {!focus && <button onClick={() => { setModalOpen(true) }} className="timer-btn mt-14 text-neutral-500 font-normal hover:text-neutral-400">View All Times</button>}
             {!focus && scramble && <div className="scramble-img absolute right-10 bottom-10">
                 <Cube cubeSize={Number(cube.charAt(2))} algorithm={`z2 y2 ${scramble.toString()}`} />
             </div>
             }
             {modalOpen &&
-                <div className="view-all-times" onClick={(e) => { !(e.target as HTMLElement).classList.contains("modal") && setModalOpen(false) }}>
+                <div className="view-all-times" onClick={(e) => { (e.target as HTMLElement).classList.contains("view-all-times") && setModalOpen(false) }}>
                     <div className="modal">
                         <div className="header"></div>
                         {times[cube].length > 12 ? times[cube].slice(0, 12).map((t, i) => (
-                            <h4 key={i}>{(t.time / 100).toString()}<span>{t.scramble}</span></h4>
+                            <div>
+                                <h4 key={i}>{(t.time / 100).toString()}<span>{t.scramble}</span></h4>
+                                <button onClick={() => { let newArr = times[cube].filter((_, ix) => ix !== i);; setTimes((times) => { times[cube] = newArr; return times; }); }}>Delete</button>
+                            </div>
                         )) : times[cube].map((t, i) => (
-                            <h4 key={i}>{(t.time / 100).toString()}<span>{t.scramble}</span></h4>
+                            <div>
+                                <h4 key={i}>{(t.time / 100).toString()}<span>{t.scramble}</span></h4>
+                                <button onClick={() => { let newArr = times[cube].filter((_, ix) => ix !== i);; setTimes((times) => { times[cube] = newArr; return times; }); }}>Delete</button>
+                            </div>
+
                         ))}
                         <button onClick={clear} className="timer-btn text-red-500 font-normal hover:text-red-400">Clear All Times</button>
                     </div>

@@ -26,7 +26,7 @@ const useLocalStorage = (key: string, initialValue?: any) => {
 };
 
 const useDarkMode = () => {
-  const [enabled, setEnabled] = useLocalStorage("dark-theme");
+  const [enabled, setEnabled] = useLocalStorage("CubeAlgs_dark");
 
   useEffect(() => {
     const className = "dark";

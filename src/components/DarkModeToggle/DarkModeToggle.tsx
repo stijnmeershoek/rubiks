@@ -6,7 +6,7 @@ export function DarkModeToggle() {
 
 
     return (
-        <div className="dark-toggle absolute right-6 top-6 flex justify-center items-center w-[25px] aspect-square cursor-pointer" tabIndex={0}>
+        <div className="dark-toggle fixed right-6 top-6 flex justify-center items-center w-[25px] aspect-square cursor-pointer" tabIndex={0}>
             {dark ? (<svg onClick={() => setDark(false)} width="20px" viewBox="0 0 1000 1000" fill="currentColor">
                 <path
                     d="M464.3,535.8C322.1,393.5,283.9,187.9,346.9,9.9C278.1,34.3,213,72.4,158,127.3C-39.3,324.7-39.3,644.7,158,842c197.3,197.3,517.2,197.4,714.6,0C927.8,787,965.7,722,990,653.2C812.2,716.1,606.5,678,464.3,535.8z" />

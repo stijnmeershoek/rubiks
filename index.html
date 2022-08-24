@@ -15,11 +15,21 @@
   <link rel="manifest" href="/manifest.json" />
 
   <title>Rubiks Cube Algorithms</title>
+  <script src="/lottie-player.js"></script>
 </head>
 
-<body>
+<body style="height: 100vh; width: 100vw; margin: 0;">
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <div id="root" style="height: 100%; width: 100%;">
+    <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+      <lottie-player src="/loading_anim.json" background="transparent" speed="1" style="width: 150px; aspect-ratio: 1;"
+        loop autoplay></lottie-player>
+    </div>
+  </div>
+  <script>
+    let theme = JSON.parse(localStorage.getItem("CubeAlgs_dark"));
+    if (theme) document.body.style.cssText += 'background-color: #121212'
+  </script>
   <script type="module" src="/src/index.tsx"></script>
 </body>
 

@@ -43,7 +43,7 @@ export const arr = [
   },
   {
     name: "Aa",
-    alg: "x L2 D2 L' U' L D2 L' U L' x'",
+    alg: "x L2 D2 L' U' L D2 L' U L'",
     arrows: [
       { s1: { face: 0, n: 2 }, s2: { face: 0, n: 6 }, scale: 8 },
       { s1: { face: 0, n: 6 }, s2: { face: 0, n: 0 }, scale: 8 },
@@ -52,7 +52,7 @@ export const arr = [
   },
   {
     name: "Ab",
-    alg: "x' L2 D2 L U L' D2 L U' L x",
+    alg: "x' L2 D2 L U L' D2 L U' L",
 
     arrows: [
       { s1: { face: 0, n: 8 }, s2: { face: 0, n: 0 }, scale: 8 },
@@ -62,7 +62,7 @@ export const arr = [
   },
   {
     name: "E",
-    alg: "x' L' U L D' L' U' L D L' U' L D' L' U L D x",
+    alg: "x' L' U L D' L' U' L D L' U' L D' L' U L D",
 
     arrows: [
       { s1: { face: 0, n: 0 }, s2: { face: 0, n: 6 }, scale: 8 },
@@ -84,7 +84,7 @@ export const arr = [
   },
   {
     name: "Ja",
-    alg: "x R2 F R F' R U2 r' U r U2 x'",
+    alg: "x R2 F R F' R U2 r' U r U2",
 
     arrows: [
       { s1: { face: 0, n: 1 }, s2: { face: 0, n: 5 }, scale: 8 },
