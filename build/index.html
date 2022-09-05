@@ -15,13 +15,23 @@
   <link rel="manifest" href="/rubiks/manifest.json" />
 
   <title>Rubiks Cube Algorithms</title>
-  <script type="module" crossorigin src="/rubiks/assets/index.c9e9bdfe.js"></script>
-  <link rel="stylesheet" href="/rubiks/assets/index.798c5841.css">
+  <script src="/rubiks/lottie-player.js"></script>
+  <script type="module" crossorigin src="/rubiks/assets/index.d20cc7a9.js"></script>
+  <link rel="stylesheet" href="/rubiks/assets/index.35669834.css">
 </head>
 
-<body>
+<body style="height: 100vh; width: 100vw; margin: 0;">
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <div id="root" style="height: 100%; width: 100%;">
+    <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+      <lottie-player src="/loading_anim.json" background="transparent" speed="1" style="width: 150px; aspect-ratio: 1;"
+        loop autoplay></lottie-player>
+    </div>
+  </div>
+  <script>
+    let theme = JSON.parse(localStorage.getItem("CubeAlgs_dark"));
+    if (theme) document.body.style.cssText += 'background-color: #121212'
+  </script>
   
 </body>
 
