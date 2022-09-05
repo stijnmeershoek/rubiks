@@ -2,18 +2,18 @@
   @apply h-full w-full overflow-auto flex flex-col justify-between items-center text-center py-14 px-6;
 
   & .select-cube {
-    @apply shadow shadow-[rgb(0,0,0,.4)] dark:shadow-[rgb(0,0,0,.75)] bg-neutral-50 border border-neutral-600 text-neutral-900 text-base font-semibold rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block p-2.5 cursor-pointer dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-white dark:text-white dark:focus:ring-neutral-700 dark:focus:border-neutral-700;
+    @apply shadow shadow-[rgb(0,0,0,.4)] dark:shadow-[rgb(0,0,0,.75)] bg-neutral-50 border border-neutral-600 text-[hsl(216,10%,9%)] text-base font-semibold rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block p-2.5 cursor-pointer dark:bg-[hsl(216,10%,9%)] dark:border-[hsl(227,10%,17%)] dark:placeholder-white dark:text-white dark:focus:ring-[hsl(225,7%,23%)] dark:focus:border-[hsl(225,7%,23%)];
   }
 
   .timer-btn {
-    @apply h-fit px-6 shadow shadow-[rgb(0,0,0,.4)] dark:shadow-[rgb(0,0,0,.75)] bg-neutral-50 border border-neutral-600 text-base font-semibold rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block p-2.5 cursor-pointer dark:bg-neutral-900 dark:border-neutral-800 dark:hover:bg-neutral-800 dark:hover:border-neutral-700 dark:focus:ring-neutral-700 dark:focus:border-neutral-700 justify-self-end;
+    @apply h-fit px-6 shadow shadow-[rgb(0,0,0,.4)] dark:shadow-[rgb(0,0,0,.75)] bg-neutral-50 border border-neutral-600 text-base font-semibold rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block p-2.5 cursor-pointer dark:bg-[hsl(216,10%,9%)] dark:border-[hsl(227,10%,17%)] dark:hover:bg-[hsl(216,10%,12%)] dark:hover:border-[hsl(225,7%,23%)] dark:focus:ring-[hsl(225,7%,23%)] dark:focus:border-[hsl(225,7%,23%)] justify-self-end;
   }
 
   & > .view-all-times {
-    @apply absolute inset-0 bg-[rgb(0,0,0,0.5)] flex justify-center items-center gap-5 cursor-pointer;
+    @apply absolute inset-0 bg-[rgb(0,0,0,0.35)] flex justify-center items-center gap-5 cursor-pointer;
 
     & > .modal {
-      @apply bg-white dark:bg-[#1b1b1b] text-left flex flex-col px-10 py-5 rounded-lg shadow-2xl cursor-default;
+      @apply bg-white dark:bg-[#1b1c1f] text-left flex flex-col px-10 py-5 shadow-2xl border-y-2 border-t-[#282a2e] border-b-[#111113] rounded-lg cursor-default;
 
       & > .timer-btn {
         @apply max-w-fit self-center mt-5;

@@ -12,7 +12,7 @@
     @apply absolute top-[1px] -translate-y-full flex w-[100%];
 
     & > * {
-      @apply border-neutral-700 dark:border-neutral-500 border-t-2 border-[1px] font-semibold flex justify-center;
+      @apply border-[hsl(225,7%,23%)] dark:border-[hsl(225,7%,40%)] border-t-2 border-b-2 border-[1px] font-semibold flex justify-center;
     }
 
     & > :nth-child(1) {
@@ -30,7 +30,7 @@
     @apply col-span-3 row-auto;
 
     & > div {
-      @apply h-full flex items-center justify-center dark:border-neutral-500 border-neutral-700 border-[1px] border-solid;
+      @apply h-full flex items-center justify-center dark:border-[hsl(225,7%,40%)] border-[hsl(225,7%,23%)] border-[1px] border-solid;
     }
 
     .name {

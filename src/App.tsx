@@ -23,7 +23,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className='app flex items-center justify-center w-screen h-screen dark:!bg-[#121212] !bg-white dark:text-neutral-200 transition-colors font-semibold'>
+    <div className='app flex items-center justify-center w-screen h-screen dark:!bg-[#1b1c1f] !bg-white dark:text-[hsl(225,7%,95%)] transition-colors font-semibold'>
       {location.pathname !== "/" && <BackButton />}
       <DarkModeToggle />
       <Routes>
